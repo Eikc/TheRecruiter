@@ -22,9 +22,9 @@ This should be easy, adjust the ".circleci/config.yaml" file to include the new 
 
 Commit the file and check your build in circleci.
 
+# Secrets
+Secrets like AWS access key's are kept in CircleCi's managed environment and are kept clean from any STDIN/STDOUT based on any build in this repository
+
 
 Have a lovely day
 - TheRecruiter team
-
-# Secrets
-Secrets like AWS access key's are kept in CircleCi's managed environment and are kept clean from any STDIN/STDOUT based on any build in this repository
