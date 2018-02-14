@@ -1,0 +1,15 @@
+branch-defaults:
+  master:
+    environment: Ebdockersampleapp-env
+environment-defaults:
+  Ebdockersampleapp-env:
+    branch: null
+    repository: null
+global:
+  application_name: EBDockerSampleApp
+  branch: null
+  default_ec2_keyname: e-hekpz4ti8n
+  default_platform: 64bit Amazon Linux 2017.09 v2.8.4 running Docker 17.09.1-ce
+  default_region: us-west-2
+  repository: null
+  sc: git
