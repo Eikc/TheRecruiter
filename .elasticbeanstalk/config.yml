@@ -13,3 +13,5 @@ global:
   default_region: us-west-2
   repository: null
   sc: git
+deploy:
+  artifact: app.zip

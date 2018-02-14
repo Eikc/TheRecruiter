@@ -32,16 +32,11 @@ jobs:
             sudo apt-get install python-pip python-dev build-essential
             sudo pip install awsebcli --upgrade
       - run:
-          name: ls
-          command: |
-            mkdir ./dist/.elasticbeanstalk
-            cp ./ebconfig/config.yml ./dist/.elasticbeanstalk/config.yml
-      - run:
-          name: ls
-          command: ls -ll ./dist
+          name: zipping package
+          command: zip -r app.zip ./dist/ ./Dockerfile
       - run:
           name: Deploying to production
-          command: cd ./dist && eb deploy 
+          command: eb deploy 
 
 workflows:
   version: 2
@@ -51,3 +46,6 @@ workflows:
       - deploy:
           requires:
             - build
+          filters:
+            branches:
+              only: master
